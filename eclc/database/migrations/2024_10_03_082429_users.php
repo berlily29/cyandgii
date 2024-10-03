@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('ECLC_INPUTS', function (Blueprint $table) {
             $table->id();
-            $table->integer('ep_id', 11)->unique();
-            $table->integer('user_id', 11)->unique();
+            $table->unsignedBigInteger('ep_id', 11);
+            $table->unsignedBigInteger('user_id', 11);
             $table->string('noe', 255);
             $table->date('date_not');
             $table->string('Type_PI',255);
