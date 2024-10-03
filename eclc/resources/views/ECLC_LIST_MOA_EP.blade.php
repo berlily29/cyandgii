@@ -53,45 +53,6 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="{{ asset('assets/img/avatars/avatar1.jpeg') }}">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>In-Progress</td>
-                                            <td>
-                                                <div style="width: 250px;">
-                                                    <a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="{{ asset('ECLC_Manage_MOA.html') }}">Manage</a>
-                                                    <a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="{{ asset('ECLC_View_MOA.html') }}">View</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="{{ asset('assets/img/avatars/avatar1.jpeg') }}">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;">
-                                                    <a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="{{ asset('ECLC_Manage_MOA.html') }}">Manage</a>
-                                                    <a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="{{ asset('ECLC_View_MOA.html') }}">View</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="{{ asset('assets/img/avatars/avatar1.jpeg') }}">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;">
-                                                    <a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="{{ asset('ECLC_Manage_MOA.html') }}">Manage</a>
-                                                    <a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="{{ asset('ECLC_View_MOA.html') }}">View</a>
-                                                </div>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
