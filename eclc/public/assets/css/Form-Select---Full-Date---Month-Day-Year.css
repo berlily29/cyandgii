@@ -1,0 +1,9 @@
+.display-inline-block {
+  display: inline-block !important;
+  width: auto;
+  border-radius: 160px;
+  font-size: 12px;
+  padding: 16px;
+  height: 53.2px;
+}
+
