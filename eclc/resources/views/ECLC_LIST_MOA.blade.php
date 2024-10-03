@@ -26,24 +26,6 @@
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-start text-light" id="accordionSidebar">
                     <li class="nav-item" style="margin-top: 20px;">
-                        <a class="nav-link" href="{{ asset('CROS_Dashboard.html') }}" style="font-family: Nunito, sans-serif;font-size: 25px;padding-top: 5px;padding-bottom: 5px;letter-spacing: -1px;">
-                            <i class="fas fa-hands-helping" style="padding-right: 5px;font-size: 20px;"></i>CROS
-                        </a>
-                        <a class="nav-link" href="{{ asset('CROS_Upload_Project_proposal.html') }}" style="padding-bottom: 5px;padding-left: 55px;padding-top: 5px;font-weight: bold;font-size: 18px;">
-                            <span style="font-weight: normal !important;">Upload</span>
-                        </a>
-                        <a class="nav-link" href="{{ asset('CROS_LIST_Projects_Proposals.html') }}" style="padding-bottom: 5px;padding-left: 55px;padding-top: 5px;font-weight: bold;font-size: 18px;--bs-primary: #8d0000;--bs-primary-rgb: 141,0,0;">
-                            <span style="font-weight: normal !important;">Proposals</span>
-                        </a>
-                        <a class="nav-link" href="{{ asset('CROS_LIST_Projects.html') }}" style="padding-bottom: 5px;padding-left: 55px;padding-top: 5px;font-weight: bold;font-size: 18px;">
-                            <span style="font-weight: normal !important;">Projects</span>
-                        </a>
-                        <a class="nav-link" href="{{ asset('CROS_LIST_Enrolled_DayCare.html') }}" style="padding-bottom: 5px;padding-left: 55px;padding-top: 5px;font-size: 18px;">Daycare</a>
-                        <a class="nav-link" href="{{ asset('Manage_User.html') }}" style="padding-bottom: 5px;padding-left: 55px;padding-top: 5px;font-weight: bold;font-size: 18px;">
-                            <span style="font-weight: normal !important;">Manage Users</span>
-                        </a>
-                    </li>
-                    <li class="nav-item" style="margin-top: 20px;">
                         <a class="nav-link" href="{{ asset('ECLC_Dashboard.html') }}" style="font-family: Nunito, sans-serif;padding-top: 5px;padding-bottom: 5px;font-size: 25px;font-weight: bold;" data-bs-target="CROS_Dashboard.html">
                             <i class="fas fa-link" style="padding-right: 5px;font-size: 20px;"></i>ECLC
                         </a>
@@ -52,14 +34,6 @@
                         </a>
                         <a class="nav-link active" href="{{ asset('ECLC_LIST_MOA.html') }}" style="padding-bottom: 5px;padding-left: 55px;padding-top: 5px;font-weight: bold;font-size: 18px;">
                             <span style="font-weight: normal !important;">Manage</span>
-                        </a>
-                    </li>
-                    <li class="nav-item" style="margin-top: 20px;">
-                        <a class="nav-link" href="#index.html" style="font-family: Nunito, sans-serif;padding-top: 5px;padding-bottom: 5px;font-size: 25px;font-weight: bold;" data-bs-target="CROS_Dashboard.html">
-                            <i class="fas fa-link" style="padding-right: 5px;font-size: 20px;"></i>ESC
-                        </a>
-                        <a class="nav-link" href="{{ asset('ESC_Upload.html') }}" style="padding-bottom: 5px;padding-left: 55px;padding-top: 5px;font-weight: bold;font-size: 18px;">
-                            <span style="font-weight: normal !important;">Files</span>
                         </a>
                     </li>
                     <li class="nav-item"></li>
