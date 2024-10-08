@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('ECLC_INPUTS', function (Blueprint $table) {
             $table->id(); // AUTO_INCREMENT primary key
-            $table->unsignedBigInteger('ep_id'); // Foreign key column
             $table->unsignedBigInteger('user_id'); // Foreign key column
             $table->string('noe'); // VARCHAR column
             $table->date('date_not'); // DATE column
@@ -38,11 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('ECLC_INPUTS', function (Blueprint $table) {
-            $table->dropForeign(['ep_id']); // Drop foreign key constraint for ep_id
-            $table->dropForeign(['user_id']); // Drop foreign key constraint for user_id
-        });
-
-        Schema::dropIfExists('ECLC_INPUTS');
+        //
     }
 };

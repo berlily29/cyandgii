@@ -1,9 +1,10 @@
 @extends('ECLC_Layout')
 
 @section('content')
+
 <div id="content">
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4"><strong>MOA/MOU</strong></h3>
+                    <h3 class="text-dark mb-4"><a href="EP_ECLC_LIST_MOA.html"><i class="far fa-arrow-alt-circle-left" style="color: var(--bs-emphasis-color);margin-right: 10px;"></i></a><strong>MOA/MOU</strong></h3>
                     <div class="col">
                         <div class="card shadow mb-5">
                             <div class="card-header py-3">
@@ -13,7 +14,7 @@
                                     </div>
                                     <div class="col"></div>
                                     <div class="col"></div>
-                                    <div class="col"><a class="btn btn-primary" role="button" style="margin: 0px;margin-top: 0px;background: rgb(141,0,0);border-color: rgb(141,0,0);margin-left: 175px;width: 130px;padding-right: 0px;padding-left: 0px;" href="ECLC_LIST_MOA.html"><i class="far fa-arrow-alt-circle-left" style="margin-left: 0px;margin-right: 10px;"></i>Return</a></div>
+                                    <div class="col"></div>
                                 </div>
                             </div>
                             <div class="card-body">

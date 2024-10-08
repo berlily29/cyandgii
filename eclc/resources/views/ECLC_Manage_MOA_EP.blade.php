@@ -3,7 +3,7 @@
 @section('content')
 <div id="content">
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4"><strong>Manage MOA/MOU</strong></h3>
+                    <h3 class="text-dark mb-4"><a href="EP_ECLC_LIST_MOA.html"><i class="far fa-arrow-alt-circle-left" style="color: var(--bs-emphasis-color);margin-right: 10px;"></i></a><strong>MOA/MOU</strong></h3>
                     <div class="col">
                         <div class="card shadow mb-3">
                             <div class="card-header py-3">

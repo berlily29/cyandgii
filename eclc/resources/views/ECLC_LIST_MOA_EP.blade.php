@@ -1,16 +1,16 @@
 @extends('ECLC_Layout')
 
 @section('content')
-            <div id="content">
+<div id="content">
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4"><strong>MOA/MUO</strong></h3>
+                    <h3 class="text-dark mb-4"><a href="user.html"><i class="far fa-arrow-alt-circle-left" style="color: var(--bs-emphasis-color);margin-right: 10px;"></i></a><strong>Manage MOA/MOU</strong></h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col">
                                     <p class="text-primary m-0 fw-bold" style="text-align: left;padding-bottom: 0px;padding-top: 0px;--bs-primary: rgb(141,0,0);--bs-primary-rgb: 141,0,0;">Projects info</p>
                                 </div>
-                                <div class="col"><a class="btn btn-primary" role="button" href="{{ asset('ECLC_Upload_MOA_EP.html') }}" style="width: 100px;height: 31px;font-size: 14px;margin-left: 570px;padding: 4px 8px;border-color: rgb(141,0,0);background: rgb(141,0,0);">Upload New</a></div>
+                                <div class="col"></div>
                             </div>
                         </div>
                         <div class="card-body">
@@ -35,22 +35,54 @@
                                             <th>Late Modified</th>
                                             <th>Date Uploaded</th>
                                             <th>Expiration</th>
+                                            <th>DTS No.</th>
                                             <th>Status</th>
                                             <th style="width: 250px;">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="{{ asset('assets/img/avatars/avatar1.jpeg') }}">Airi Satou</td>
+                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
                                             <td>2008/11/28</td>
                                             <td>2008/11/28</td>
                                             <td>2008/11/28</td>
+                                            <td>123</td>
                                             <td>Completed</td>
                                             <td>
-                                                <div style="width: 250px;">
-                                                    <a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="{{ asset('ECLC_Manage_MOA.html') }}">Manage</a>
-                                                    <a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="{{ asset('ECLC_View_MOA.html') }}">View</a>
-                                                </div>
+                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="EP_ECLC_Manage_MOA.html">Managel</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="EP_ECLC_View_MOA.html">View</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
+                                            <td>2008/11/28</td>
+                                            <td>2008/11/28</td>
+                                            <td>2008/11/28</td>
+                                            <td>234</td>
+                                            <td>In-Progress</td>
+                                            <td>
+                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_Manage_MOA.html">Managel</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
+                                            <td>2008/11/28</td>
+                                            <td>2008/11/28</td>
+                                            <td>2008/11/28</td>
+                                            <td>345</td>
+                                            <td>Completed</td>
+                                            <td>
+                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_Manage_MOA.html">Managel</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
+                                            <td>2008/11/28</td>
+                                            <td>2008/11/28</td>
+                                            <td>2008/11/28</td>
+                                            <td>456</td>
+                                            <td>Completed</td>
+                                            <td>
+                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_Manage_MOA.html">Managel</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -60,6 +92,7 @@
                                             <td><strong>Late Modified</strong></td>
                                             <td><strong>Date Uploaded</strong></td>
                                             <td><strong>Expiration</strong></td>
+                                            <td><strong>DTS No.</strong></td>
                                             <td><strong>Status</strong></td>
                                             <td style="height: 40.5px;"><strong>Action</strong></td>
                                         </tr>
