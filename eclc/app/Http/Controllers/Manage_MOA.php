@@ -46,25 +46,29 @@ class Manage_MOA extends Controller
 
     // Handle file upload (if a new file is uploaded)
     if ($request->hasFile('MOA')) {
-        // Delete the old file if it exists
-        if ($input->MOA && file_exists(storage_path('app/public/' . $input->MOA))) {
-            unlink(storage_path('app/public/' . $input->MOA)); // Delete the old file
-        }
-
-        // Handle the new file upload
         $file = $request->file('MOA');
-        $originalName = $file->getClientOriginalName();
-        $filePath = $file->storeAs('moa_files', $originalName, 'public');
+    $originalName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME); // Get original file name without extension
+    $extension = $file->getClientOriginalExtension(); // Get file extension
+    $fileName = $originalName . '.' . $extension; // Combine to get the full name
+    
+    // Check if file exists and modify the name if it does
+    $counter = 1;
+    while (file_exists(storage_path('app/public/moa_files/' . $fileName))) {
+        $fileName = $originalName . '(' . $counter . ').' . $extension;
+        $counter++;
+    }
+    
+    // Store the file
+    $filePath = $request->file('MOA')->storeAs('moa_files', $fileName, 'public');
 
-        // Update the file path in the validated data
-        $validatedData['MOA'] = $filePath;
+    $fileUrl = asset('storage/' . $filePath);
+    $validatedData['MOA'] = $filePath; // Store the relative path
     }
 
     // Update the record in the database with the new data
     $input->update($validatedData);
 
     // Redirect or return a response
-    return redirect()->back()->with('success', 'Data Updated successfully!');
-
+    return redirect()->route('list.index')->with('success', 'Data stored successfully!');
     }
 }

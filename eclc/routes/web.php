@@ -9,7 +9,7 @@ Route::group([/*'middleware' => 'auth',*/ 'prefix' => ''], function () {
 
     Route::get('', [CRUD::class, 'Dashboard']);
     Route::get('/list-ep', [CRUD::class, 'LISTMOAEP']);
-    Route::get('/list', [CRUD::class, 'LISTMOA']);
+    Route::get('/list', [CRUD::class, 'LISTMOA'])->name('list.index');
 
     Route::group(['prefix'=> 'manage'], function() {
         Route::get('/{id}', [Manage_MOA::class, 'ManageMOA_Index'])->name('manage.moa.index');

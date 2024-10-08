@@ -54,14 +54,24 @@ class Upload_MOA extends Controller
 
          // Handle file upload
     if ($request->hasFile('MOA')) {
-        // Store the file in the public directory or storage/app/public
-        $file = $request->file('MOA');
-        $originalName = $file->getClientOriginalName();        
-        $filePath = $request->file('MOA')->storeAs('moa_files', $originalName, 'public');
+   
+    $file = $request->file('MOA');
+    $originalName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME); // Get original file name without extension
+    $extension = $file->getClientOriginalExtension(); // Get file extension
+    $fileName = $originalName . '.' . $extension; // Combine to get the full name
+    
+    // Check if file exists and modify the name if it does
+    $counter = 1;
+    while (file_exists(storage_path('app/public/moa_files/' . $fileName))) {
+        $fileName = $originalName . '(' . $counter . ').' . $extension;
+        $counter++;
+    }
+    
+    // Store the file
+    $filePath = $request->file('MOA')->storeAs('moa_files', $fileName, 'public');
 
-        $fileUrl = asset('storage/' . $filePath);
-
-        $validatedData['MOA'] = $filePath;
+    $fileUrl = asset('storage/' . $filePath);
+    $validatedData['MOA'] = $filePath; // Store the relative path
         
     }
 
@@ -70,6 +80,6 @@ class Upload_MOA extends Controller
         ECLC_Inputs::create($validatedData);
 
         // Redirect or return a response
-        return redirect()->back()->with('success', 'Data stored successfully!');
+        return redirect()->route('list.index')->with('success', 'Data stored successfully!');
     }
 }
