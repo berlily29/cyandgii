@@ -142,7 +142,7 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
-                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><a href="EP_ECLC_Upload_MOA.html"><span style="color: rgb(141,0,0);font-size: 13px;">MOA/MOU</span></a></div>
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><a href="/upload-ep"><span style="color: rgb(141,0,0);font-size: 13px;">MOA/MOU</span></a></div>
                                         </div>
                                         <div class="col-auto"><a href="EP_ECLC_Upload_MOA.html"><i class="fas fa-handshake fa-2x text-gray-300"></i></a></div>
                                     </div>
