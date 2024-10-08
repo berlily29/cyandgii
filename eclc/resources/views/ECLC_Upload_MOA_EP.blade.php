@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Profile - LSO</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Nunito.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/File-Manager.css">
-    <link rel="stylesheet" href="assets/css/Filter.css">
-    <link rel="stylesheet" href="assets/css/Form-Select---Full-Date---Month-Day-Year-1.css">
-    <link rel="stylesheet" href="assets/css/Form-Select---Full-Date---Month-Day-Year.css">
-    <link rel="stylesheet" href="assets/css/Forum---Thread-listing-forum.css">
-    <link rel="stylesheet" href="assets/css/Forum---Thread-listing.css">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Nunito.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/File-Manager.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Filter.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Form-Select---Full-Date---Month-Day-Year-1.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Form-Select---Full-Date---Month-Day-Year.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Forum---Thread-listing-forum.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Forum---Thread-listing.css') }}">
 </head>
 
 <body id="page-top">
@@ -111,7 +111,11 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="container-fluid">
+            <div class="container-fluid">
+                <form action="{{ route('upload.ep.store')}}" method = 'POST' enctype="multipart/form-data">
+                    @csrf
+
+
                     <h3 class="text-dark mb-4"><a href="user.html"> <i class="far fa-arrow-alt-circle-left" style="color: var(--bs-emphasis-color);margin-right: 10px;"></i></a><strong>MOA/MOU</strong></h3>
                     <div class="col">
                         <div class="card shadow mb-3">
@@ -119,19 +123,17 @@
                                 <p class="text-primary m-0 fw-bold" style="--bs-primary: rgb(141,0,0);--bs-primary-rgb: 141,0,0;">MOA/MOU information</p>
                             </div>
                             <div class="card-body">
-                                <form action="" method = 'POST'>
-                                    @csrf
 
                                     <div class="row">
                                         <div class="col">
-                                            <div class="mb-3"><label class="form-label" for="Title" style="color: var(--bs-emphasis-color);"><strong>In Charge</strong></label><input class="form-control" type="text" id="username-2" name="Title" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter In Charge"></div>
-                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Lead" style="color: var(--bs-emphasis-color);"><strong>College, Branch Campus</strong></label><input class="form-control" type="text" id="username-1" name="Lead" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Which Campus or College From"></div>
-                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Proj_location" style="color: var(--bs-emphasis-color);"><strong>Name of Entity</strong></label><input class="form-control" type="text" id="username-6" name="Proj_location" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Entity's Name"></div>
+                                            <div class="mb-3"><label class="form-label" for="Title" style="color: var(--bs-emphasis-color);"><strong>In Charge</strong></label><input class="form-control" type="text" id="username-2" name="in_charge" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter In Charge"></div>
+                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Lead" style="color: var(--bs-emphasis-color);"><strong>College, Branch Campus</strong></label><input class="form-control" type="text" id="username-1" name="college_id" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Which Campus or College From"></div>
+                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Proj_location" style="color: var(--bs-emphasis-color);"><strong>Name of Entity</strong></label><input class="form-control" type="text" id="username-6" name="noe" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Entity's Name"></div>
                                             <div class="mb-3" style="margin-top: 15px;">
                                             <label class="form-label" for="duration" style="color: var(--bs-emphasis-color);">
                                                 <strong>Duration of Partnership</strong>
                                             </label>
-                                            <select class="form-select" id="duration" name="duration" style="width: 300.7px; color: rgb(133,135,150);">
+                                            <select class="form-select" id="duration" name="dop" style="width: 300.7px; color: rgb(133,135,150);">
                                                 <option value="" disabled selected>Select Duration</option>
                                                 <option value="Days">Days</option>
                                                 <option value="Months">Months</option>
@@ -140,18 +142,18 @@
                                                 <option value="Upon Completion">Upon Completion</option>
                                             </select>
                                         </div>
-                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Proposal_Letter" style="color: var(--bs-emphasis-color);"><strong>MOA/MOU</strong></label><input class="form-control" type="file" style="width: 528px;height: 38px;padding: 6px 12px;padding-left: 5px;" name="Proposal_Letter"></div>
+                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Proposal_Letter" style="color: var(--bs-emphasis-color);"><strong>MOA/MOU</strong></label><input class="form-control" type="file" style="width: 528px;height: 38px;padding: 6px 12px;padding-left: 5px;" name="MOA" max="10485760"></div>
                                         </div>
                                         <div class="col">
-                                            <div class="mb-3"><label class="form-label" for="Admin_Involved" style="color: var(--bs-emphasis-color);"><strong>Type of Partner Institution</strong></label><input class="form-control" type="text" id="username-3" name="Admin_Involved" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Type of Partner Institution"></div>
-                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Students_Involved" style="color: var(--bs-emphasis-color);"><strong>Nature of Collaboration</strong></label><input class="form-control" type="text" id="username-7" name="Students_Involved" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter The Nature of Collaboration"></div>
-                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Team_Leader" style="color: var(--bs-emphasis-color);"><strong>Deliverable/Desired Output</strong></label><input class="form-control" type="text" id="username-9" name="Team_Leader" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Deliverable or Desidered Output"></div>
-                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Leader_Email" style="color: var(--bs-emphasis-color);"><strong>Target Beneficiaries</strong></label><input class="form-control" type="text" id="username-4" name="Team_Leader" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter The Target Beneficiaries"></div>
+                                            <div class="mb-3"><label class="form-label" for="Admin_Involved" style="color: var(--bs-emphasis-color);"><strong>Type of Partner Institution</strong></label><input class="form-control" type="text" id="username-3" name="Type_PI" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Type of Partner Institution"></div>
+                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Students_Involved" style="color: var(--bs-emphasis-color);"><strong>Nature of Collaboration</strong></label><input class="form-control" type="text" id="username-7" name="noc" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter The Nature of Collaboration"></div>
+                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Team_Leader" style="color: var(--bs-emphasis-color);"><strong>Deliverable/Desired Output</strong></label><input class="form-control" type="text" id="username-9" name="des_out" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Deliverable or Desidered Output"></div>
+                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Leader_Email" style="color: var(--bs-emphasis-color);"><strong>Target Beneficiaries</strong></label><input class="form-control" type="text" id="username-4" name="tar_ben" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter The Target Beneficiaries"></div>
                                             <div class="mb-3" style="margin-top: 15px;">
                                                 <label class="form-label" for="projectStatus" style="color: var(--bs-emphasis-color);">
                                                     <strong>With Project or Without Project</strong>
                                                 </label>
-                                                <select class="form-select" id="projectStatus" name="projectStatus" style="width: 150px; color: rgb(133,135,150);">
+                                                <select class="form-select" id="projectStatus" name="wwp" style="width: 150px; color: rgb(133,135,150);">
                                                     <option value="" disabled selected>Select Project Status</option>
                                                     <option value="With Project">With Project</option>
                                                     <option value="Without Project">Without Project</option>
@@ -170,9 +172,9 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 col-xxl-11" style="width: 100%;">
-                                        <form>
+                                        
                                             <div class="mb-3"><label class="form-label" for="signature" style="color: var(--bs-emphasis-color);"><strong>Project Remarks</strong></label><textarea class="form-control" id="signature" rows="4" name="signature"></textarea></div>
-                                        </form>
+                                       
                                         <div class="row">
                                             <div class="col"></div>
                                             <div class="col"></div>
@@ -185,6 +187,8 @@
                         </div>
                     </div>
                 </div>
+            </form>
+
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">

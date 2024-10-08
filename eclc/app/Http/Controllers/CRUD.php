@@ -21,15 +21,7 @@ class CRUD extends Controller
     public function ManageEP() {
         return view('Manage_MOA_EP');
     }
-    public function UploadMOAEP() {
-        return view('ECLC_Upload_MOA_EP');
-    }
-    public function UploadMOA() {
-        return view('ECLC_Upload_MOA');
-    }
-    public function UploadNotarized() {
-        return view('ECLC_Upload_Notarized_MOA');
-    }
+   
     public function ViewMOA() {
         return view('ECLC_View_MOA');
     }

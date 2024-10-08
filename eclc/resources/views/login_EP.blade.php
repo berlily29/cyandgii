@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Login - LSO</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Nunito.css">
-    <link rel="stylesheet" href="assets/css/File-Manager.css">
-    <link rel="stylesheet" href="assets/css/Filter.css">
-    <link rel="stylesheet" href="assets/css/Form-Select---Full-Date---Month-Day-Year-1.css">
-    <link rel="stylesheet" href="assets/css/Form-Select---Full-Date---Month-Day-Year.css">
-    <link rel="stylesheet" href="assets/css/Forum---Thread-listing-forum.css">
-    <link rel="stylesheet" href="assets/css/Forum---Thread-listing.css">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Nunito.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/File-Manager.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Filter.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Form-Select---Full-Date---Month-Day-Year-1.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Form-Select---Full-Date---Month-Day-Year.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Forum---Thread-listing-forum.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Forum---Thread-listing.css') }}">
 </head>
 
 <body class="bg-gradient-primary" style="background: rgb(141,0,0);">

@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('project_remark', 255); // Column for project remarks, max length of 255 characters
             $table->timestamps(); // Adds created_at and updated_at timestamps
 
-            // Add foreign key constraints
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Foreign key to users table
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade'); // Foreign key to projects table
-            $table->foreign('eclc_id')->references('eclc_id')->on('ECLC_INPUTS')->onDelete('cascade'); // Foreign key to ECLC_INPUTS table
+            // // Add foreign key constraints
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Foreign key to users table
+            // $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade'); // Foreign key to projects table
+            // $table->foreign('eclc_id')->references('eclc_id')->on('ECLC_INPUTS')->onDelete('cascade'); // Foreign key to ECLC_INPUTS table
         });
     }
 

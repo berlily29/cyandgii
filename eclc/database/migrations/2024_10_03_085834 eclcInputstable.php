@@ -16,6 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id'); // Foreign key column
             $table->unsignedBigInteger('pr_id'); // Foreign key column for proj_rem
 
+            $table->string('in_charge'); // Column for "In Charge" name
+            $table->string('college_id', 3); // Foreign key to reference college/branch campus
             $table->string('noe'); // VARCHAR column
             $table->date('date_not'); // DATE column
             $table->string('Type_PI'); // VARCHAR column
@@ -31,9 +33,6 @@ return new class extends Migration
             $table->timestamps(); // created_at and updated_at columns
             $table->softDeletes(); // deleted_at column for soft deletes
 
-            // Add foreign key constraints
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('pr_id')->references('pr_id')->on('proj_rem')->onDelete('cascade'); // Foreign key to proj_rem
         });
     }
 
