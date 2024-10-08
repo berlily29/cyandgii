@@ -36,5 +36,7 @@ class CRUD extends Controller
     public function ViewMOAEP() {
         return view('ECLC_View_MOA_EP');
     }
-   
+    public function UserLI() {
+        return view('EP_UserLoggedIn');
+    }
 }

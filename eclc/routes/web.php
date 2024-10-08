@@ -29,6 +29,7 @@ Route::group([/*'middleware' => 'auth',*/ 'prefix' => ''], function () {
     Route::get('/upload-notarized', [CRUD::class, 'UploadNotarized']);
     Route::get('/view', [CRUD::class, 'ViewMOA']);
     Route::get('/view-ep', [CRUD::class, 'ViewMOAEP']);
+    Route::get('/user-li', [CRUD::class, 'UserLI']);
 
 });
 
