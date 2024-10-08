@@ -18,6 +18,9 @@ class CRUD extends Controller
     public function ManageMOA() {
         return view('ECLC_Manage_MOA');
     }
+    public function ManageEP() {
+        return view('Manage_MOA_EP');
+    }
     public function UploadMOAEP() {
         return view('ECLC_Upload_MOA_EP');
     }
@@ -30,4 +33,8 @@ class CRUD extends Controller
     public function ViewMOA() {
         return view('ECLC_View_MOA');
     }
+    public function ViewMOAEP() {
+        return view('ECLC_View_MOA_EP');
+    }
+   
 }
