@@ -27,7 +27,7 @@
                                     <thead>
                                         <tr>
                                             <th>Title</th>
-                                            <th>Late Modified</th>
+                                            <th>Last Modified</th>
                                             <th>Date Uploaded</th>
                                             <th>Expiration</th>
                                             <th>Status</th>
@@ -35,117 +35,21 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+
+                                    @foreach($eclc_inputs as $input)
                                         <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
+                                            <td>{{$input->MOA}}</td>
+                                            <td>{{$input->updated_at}}</td>
+                                            <td>{{$input->created_at}}</td>
+                                            <td>{{$input->expiry_date}}</td>
+                                            <td>{{$input->Status}}</td>
                                             <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
+                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="{{ url('/manage/' . $input->eclc_id) }}">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="{{ asset('storage/moa_files/' . $input->MOA . '.pdf') }}" target="_blank">View</a></div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_Upload_Notarized_MOA.html">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
+                                    @endforeach
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td><strong>Title</strong></td>
-                                            <td><strong>Late Modified</strong></td>
-                                            <td><strong>Date Uploaded</strong></td>
-                                            <td><strong>Expiration</strong></td>
-                                            <td><strong>Status</strong></td>
-                                            <td style="height: 40.5px;"><strong>Action</strong></td>
-                                        </tr>
-                                    </tfoot>
+                                    
                                 </table>
                             </div>
                             <div class="row">

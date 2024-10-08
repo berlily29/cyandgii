@@ -3,30 +3,22 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CRUD;
 use App\Http\Controllers\Upload_MOA;
-
-
-Route::get('/', function () {
-    $users = [
-        ['name' => 'John', 'age' => 25],
-        ['name' => 'Jane', 'age' => 30],
-        ['name' => 'Cyron', 'age' => 21],
-        ['name' => 'Luise', 'age' => 21],
-        ['name' => 'Kim', 'age' => 22],    
-    ];
-
-    $otherData = 'Table of contents';
-
-    return view('welcome', compact('users','otherData'));
-});
+use App\Http\Controllers\Manage_MOA;
 
 Route::group([/*'middleware' => 'auth',*/ 'prefix' => ''], function () {
 
-    Route::get('/dashboard', [CRUD::class, 'Dashboard']);
+    Route::get('', [CRUD::class, 'Dashboard']);
     Route::get('/list-ep', [CRUD::class, 'LISTMOAEP']);
     Route::get('/list', [CRUD::class, 'LISTMOA']);
-    Route::get('/manage', [CRUD::class, 'ManageMOA']);
-    Route::get('/manage-ep', [CRUD::class, 'ManageMOAEP']);
-    
+
+    Route::group(['prefix'=> 'manage'], function() {
+        Route::get('/{id}', [Manage_MOA::class, 'ManageMOA_Index'])->name('manage.moa.index');
+        Route::get('/ep', [Manage_MOA::class, 'ManageMOAEP_Index'])->name('manage.ep.index');
+        Route::put('/{id}', [Manage_MOA::class, 'Manage_Update'])->name('manage.moa.update');
+        Route::put('/ep/{id}', [Manage_MOA::class, 'Manage_Update'])->name('manage.ep.update');
+
+    });
+
     Route::group(['prefix'=> 'upload'], function() {
         Route::get('', [Upload_MOA::class, 'UploadMOA_Index'])->name('upload.moa.index');
         Route::get('/ep', [Upload_MOA::class, 'UploadMOAEP_Index'])->name('upload.ep.index');

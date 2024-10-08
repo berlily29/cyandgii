@@ -12,12 +12,12 @@ class Upload_MOA extends Controller
 {
 
     public function UploadMOAEP_Index() {
-        $collegeBranches = CollegeBranch::all();
-        return view('ECLC_Upload_MOA_EP')->with(['collegeBranches' => $collegeBranches]);
+        return view('ECLC_Upload_MOA_EP');
     }
     
     public function UploadMOA_Index() {
-        return view('ECLC_Upload_MOA');
+        $collegeBranches = CollegeBranch::all();
+        return view('ECLC_Upload_MOA')->with(['collegeBranches' => $collegeBranches]);
     }
     public function UploadNotarized_Index() {
         return view('ECLC_Upload_Notarized_MOA');
