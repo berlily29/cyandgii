@@ -126,8 +126,18 @@
 
                                     <div class="row">
                                         <div class="col">
-                                            <div class="mb-3"><label class="form-label" for="Title" style="color: var(--bs-emphasis-color);"><strong>In Charge</strong></label><input class="form-control" type="text" id="username-2" name="in_charge" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter In Charge"></div>
-                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Lead" style="color: var(--bs-emphasis-color);"><strong>College, Branch Campus</strong></label><input class="form-control" type="text" id="username-1" name="college_id" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Which Campus or College From"></div>
+                                            <div class="mb-3"><label class="form-label" for="Title" style="color: var(--bs-emphasis-color);"><strong>In Charge</strong></label><input class="form-control" type="text" id="username-2" name="in_charge" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter In Charge">
+                                            <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Lead" style="color: var(--bs-emphasis-color);"><strong>College, Branch Campus</strong></label></div>
+                                                <select class="form-select" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" name="college_id" required>
+                                                    <option value="" disabled selected>Select College</option> 
+                                                    @foreach ($collegeBranches as $Branch)
+                                                        <option value="{{ $Branch->college_id }}">
+                                                            {{ $Branch->college_branch }} 
+                                                        </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+
                                             <div class="mb-3" style="margin-top: 15px;"><label class="form-label" for="Proj_location" style="color: var(--bs-emphasis-color);"><strong>Name of Entity</strong></label><input class="form-control" type="text" id="username-6" name="noe" style="width: 528px;height: 38px;padding: 6px 12px;color: rgb(133,135,150);border-radius: 5.6px;display: block;border-width: 0.666667px;border-color: rgb(133,135,150);" placeholder="Enter Entity's Name"></div>
                                             <div class="mb-3" style="margin-top: 15px;">
                                             <label class="form-label" for="duration" style="color: var(--bs-emphasis-color);">

@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ECLC_Inputs;
+use App\Models\CollegeBranch;
+
 
 
 class Upload_MOA extends Controller
 {
 
     public function UploadMOAEP_Index() {
-        return view('ECLC_Upload_MOA_EP');
+        $collegeBranches = CollegeBranch::all();
+        return view('ECLC_Upload_MOA_EP')->with(['collegeBranches' => $collegeBranches]);
     }
+    
     public function UploadMOA_Index() {
         return view('ECLC_Upload_MOA');
     }
