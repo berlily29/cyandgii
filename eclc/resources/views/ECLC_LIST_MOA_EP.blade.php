@@ -112,15 +112,10 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4"><a href="user.html"><i class="far fa-arrow-alt-circle-left" style="color: var(--bs-emphasis-color);margin-right: 10px;"></i></a><strong>Manage MOA/MOU</strong></h3>
+                    <h3 class="text-dark mb-4"><strong>MOA/MUO</strong></h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="text-primary m-0 fw-bold" style="text-align: left;padding-bottom: 0px;padding-top: 0px;--bs-primary: rgb(141,0,0);--bs-primary-rgb: 141,0,0;">Projects info</p>
-                                </div>
-                                <div class="col"></div>
-                            </div>
+                            <p class="text-primary m-0 fw-bold" style="--bs-primary: rgb(141,0,0);--bs-primary-rgb: 141,0,0;">Projects Info</p>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -141,71 +136,29 @@
                                     <thead>
                                         <tr>
                                             <th>Title</th>
-                                            <th>Late Modified</th>
+                                            <th>Last Modified</th>
                                             <th>Date Uploaded</th>
                                             <th>Expiration</th>
-                                            <th>DTS No.</th>
                                             <th>Status</th>
                                             <th style="width: 250px;">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+
+                                    @foreach($eclc_inputs as $input)
                                         <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>123</td>
-                                            <td>Completed</td>
+                                            <td>{{$input->MOA}}</td>
+                                            <td>{{$input->updated_at}}</td>
+                                            <td>{{$input->created_at}}</td>
+                                            <td>{{$input->expiry_date}}</td>
+                                            <td>{{$input->Status}}</td>
                                             <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="EP_ECLC_Manage_MOA.html">Managel</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="EP_ECLC_View_MOA.html">View</a></div>
+                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="{{ url('/manage/' . $input->eclc_id) }}">Manage</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="{{ asset('storage/moa_files/' . $input->MOA . '.pdf') }}" target="_blank">View</a></div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>234</td>
-                                            <td>In-Progress</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_Manage_MOA.html">Managel</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>345</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_Manage_MOA.html">Managel</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>2008/11/28</td>
-                                            <td>456</td>
-                                            <td>Completed</td>
-                                            <td>
-                                                <div style="width: 250px;"><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;background: rgb(141,0,0);border-color: rgb(141,0,0);" href="ECLC_Manage_MOA.html">Managel</a><a class="btn btn-primary" role="button" style="width: 68.4167px;height: 31px;margin-left: 5px;padding: 4px 8px;border-radius: 4px;font-size: 14px;border-color: rgb(141,0,0);background: rgb(141,0,0);" href="ECLC_View_MOA.html">View</a></div>
-                                            </td>
-                                        </tr>
+                                    @endforeach
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td><strong>Title</strong></td>
-                                            <td><strong>Late Modified</strong></td>
-                                            <td><strong>Date Uploaded</strong></td>
-                                            <td><strong>Expiration</strong></td>
-                                            <td><strong>DTS No.</strong></td>
-                                            <td><strong>Status</strong></td>
-                                            <td style="height: 40.5px;"><strong>Action</strong></td>
-                                        </tr>
-                                    </tfoot>
+                                    
                                 </table>
                             </div>
                             <div class="row">
@@ -234,6 +187,7 @@
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

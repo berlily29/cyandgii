@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('college_branch_t', function (Blueprint $table) {
             // Set college_id as a unique string with a max length of 3
-            $table->string('college_id', 3)->unique()->primary();
+            $table->string('college_id', 255)->unique()->primary();
             $table->string('college_branch');
             $table->string('college_address');
             $table->timestamps();

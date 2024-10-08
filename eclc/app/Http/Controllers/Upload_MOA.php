@@ -12,7 +12,8 @@ class Upload_MOA extends Controller
 {
 
     public function UploadMOAEP_Index() {
-        return view('ECLC_Upload_MOA_EP');
+        $collegeBranches = CollegeBranch::all();
+        return view('ECLC_Upload_MOA_EP')->with(['collegeBranches' => $collegeBranches]);
     }
     
     public function UploadMOA_Index() {

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('pr_id'); // Foreign key column for proj_rem
 
             $table->string('in_charge'); // Column for "In Charge" name
-            $table->string('college_id', 3); // Foreign key to reference college/branch campus
+            $table->string('college_id', 255); // Foreign key to reference college/branch campus
             $table->string('noe'); // VARCHAR column
             $table->date('date_not'); // DATE column
             $table->string('Type_PI'); // VARCHAR column
